@@ -75,10 +75,6 @@
         }
         getSummAndCount();
 
-        //2
-
-        //4
-
         //5
         function getSumNumber(num) {
             let sum = 0;
@@ -173,7 +169,7 @@
         getCountEvenElem([10,38,51,67,92,205,579,446]);
 
         //8
-
+        
 
         //9
         function bubbleSort(arr) {
@@ -189,6 +185,30 @@
             return arr;   
         }
         bubbleSort([45,78,2,13,90,67,19,56]);
+
+        function selectSort(arr) { 
+	    	for (var i = 0; i < arr.length; i++) {
+	       	var min = i;
+		       	for (var j = i+1; j < arr.length; j++) {
+		          if (arr[j] < arr[min]) min = j; 
+		       	} 
+		       	var buf = arr[min]; arr[min] = arr[i]; arr[i] = buf;
+	     	}                    
+	    	return arr;    
+		}
+	 	selectSort([34,65,12,97,58,123,66,49]);
+
+        function insertSort(arr) {                              
+            for (var i = 0; i < arr.length; i++) {
+                var el = arr[i], j = i - 1;
+                while (j >= 0 && arr[j] > el) {
+                    arr[j+1] = arr[j]; j--; 
+                }
+                arr[j+1] = el;
+            }                    
+            return arr;    
+        }
+        insertSort([33,567,403,89,11,256,874,390]);
 
         //функции
         //1
@@ -213,6 +233,15 @@
         //     }
         // }
         // getDay(3);
+
+        //2    не сделана
+        // function getDistance(x1,y1,x2,y2) {
+        // const a = (x1 > x2) ? x1 - x2 : x2 - x1;
+        // const b = (y1 > y2) ? y1 - y2 : y2 - y1;
+
+        //     return  ;
+        // }
+        // getDistance(-2,-7,5,2);
     </script>
 </body>
 </html>
